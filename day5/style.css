@@ -1,0 +1,18 @@
+
+/*No structure in css can write directly*/
+
+div{
+    background-color: aquamarine;
+    text-align: centre;
+    color: brown;
+    width: 250px;
+}
+
+div p{
+    color: color-mix(in srgb, color percentage, color percentage);
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(18, 5, 1);
+}
