@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+
+            grid-column: (4,200px);
+
+            grid-template-rows: 80px auto 80px; 
+
+            gap:10px;
+
+            border:1px solid blue
+        }
+
+        header{
+            grid-column: 1/3;
+            /* starts with 1 and end before column 3 */
+            background-color: #b83232;
+            padding:20px;
+        }
+
+        aside{
+            background-color: aqua;
+            padding:20px;
+        }
+
+        main{
+            background-color: pink;
+        }
+
+        footer{
+            background-color: blueviolet;
+            grid-column: 1/3;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+
+        <aside>Sider Bar</aside>
+
+        <main>
+            Main Content
+        </main>
+
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
