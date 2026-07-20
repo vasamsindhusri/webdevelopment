@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Data types- Different types of data
+
+        //1.String - "Anything b/w quotes is String" or 'Text'
+
+        var customername="John"
+        //build in methods/function - task
+        //typeof(value)
+
+        console.log(typeof(customername))
+
+        //2. Number - +ve , -ve , decimal number
+
+        var age=21
+        console.log(typeof(age))
+
+        //3. Boolean - true or false
+
+        var loggedin=true
+        var Netflix="false"
+        console.log(typeof(loggedin))
+        console.log(typeof(Netflix))
+
+        //4. undefined - When no value is assigned
+        var x
+        console.log(typeof(x))
+
+        //5. null - nothing
+        var discount=null
+        console.log(typeof(discount))
+
+        //there is bug in JS , data type of null ,it shows object as output
+
+        //Data type - 2
+         
+        // Multiple valyue - Array
+
+        //Array:To store multiple data of different data type
+        //Symbol - []  square bracket
+        //Rule: Index number(position number of data ) starts with 0
+
+        var stds=["Abhi" , "Swarropa", 1050 , true]
+        console.log(stds)
+
+        //total number of data we .length
+        console.log(stds.length)
+
+        //Access the data through index number
+        console.log(stds[1])
+        console.log(stds[0])
+
+        //object: collection of data belongs to one single thing 
+        //symbol:{} curly braces
+        //Rule:  key:value pair
+
+        var emp1={
+            name:"Sindhu",
+            email:"sindhu@gmail.com",
+            LoggedInstatus:true
+        }
+        console.log(emp1)
+
+        //Access it through keyname - objectname.keyname
+
+        console.log(emp1.name)
+        console.log(emp1.LoggedInstatus)
+
+        //Function - To do a specific task
+        //keyword - function functioname
+
+        // Task:build billCalculator
+
+        function billCalculator(){
+            //Body of function - Instruction/logic
+
+            var prod1="milk"
+            var prod2="bread"
+
+            var price1=100
+            var price2=50
+            
+            var totBill=price1+price2
+            
+            console.log("Total bill of" , prod1, "and",prod2,"is:",totBill)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h2{
+            color:rgb(49, 47, 47);
+            font-size: 25px;
+            
+        }
+
+        p{
+            display :inline-flex;
+            border:2px double rgb(152, 148, 160);
+            font-size: 20px;
+            border-radius: 10px;
+
+            padding-left: 10px;
+
+            color:rgb(43, 43, 55);
+            margin:10px;
+            width:600px;
+            height:100px;
+
+            box-sizing:content-box; 
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+             
+        }
+
+        body{
+             padding-left: 450px;
+            padding-top: 50px;
+            background-color: black;
+        
+        }
+
+        
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #707272, #676769);
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+       
+    }
+
+    form{
+        background: #424141;
+        padding: 45px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        width: 350px;
+    }
+
+    label{
+        font-weight: bold;
+        color: #0f0a0a;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #161816;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input:focus,
+    textarea:focus{
+        border-color: #636465;
+        outline: none;
+        box-shadow: 0 0 5px rgba(107, 108, 109, 0.5);
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button{
+        width: 48%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: rgb(100, 98, 98);
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]{
+        background-color: #393d3a;
+    }
+
+    button[type="submit"]:hover{
+        background-color: #3b403c;
+    }
+
+    button[type="reset"]{
+        background-color: #444142;
+    }
+
+    button[type="reset"]:hover{
+        background-color: #5d5858;
+    }
+</style>
+        
+   
+</head>
+<body>
+    
+
+    <h2>Contact Details</h2>
+   
+    <p>Phone No: 8106464960<br>
+    Email: vasamsindhusri@gmail.com<br>
+    Linkedin: https://www.linkedin.com/in/sindhu-sri-vasam-767007324</p>
+   
+     <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+        <label for="message">Message</label><br>
+       <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+   
+    
+    
+</body>
+</html>
