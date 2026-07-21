@@ -31,10 +31,11 @@
             justify-content: space-between;
           }
            
-          h2{
+          h3{
             font-size: 30px;
-            text-align: center;
-            padding-top: 100px;
+            text-align:start;
+            padding-top: 10px;
+            padding-left: 350px;
             color:beige;
           }
 
@@ -48,11 +49,46 @@
           body{
             background-color: black;
           }
+
+           nav {
+               display: flex;
+              justify-content:flex-end;
+              gap: 20px;
+             padding: 5px 70px;
+              padding-top: 50px;
+              padding-right: 50px;
+    }
+
+        a{
+            color:rgb(109, 105, 105);
+            text-decoration: none;
+            margin-right: 25px;
+            
+    }
+
+    a:hover{
+            background-color:rgb(31, 31, 32);
+            transition: 0.4s;
+    }
+
     </style>
 </head>
 <body>
-  <h2>Skills</h2>
-  <div>
+ 
+  <nav>
+            
+           <div class="menu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Projects.html">Projects</a>
+           <a href="contact.html">Contact</a>
+           </div>
+        </nav>
+  
+
+     <h3>Skills</h3>
+     <div>
        <h1>
         Programming Languages:
         <br> <br>c<br> Java<br>Python
@@ -93,5 +129,7 @@
         </h1>
        
          </div>
+
+         
 </body>
 </html>

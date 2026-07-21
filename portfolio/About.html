@@ -12,7 +12,23 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align:justify;
         } */
-        
+        nav{     
+            gap:20px;
+            padding: 0px 70px;
+            display:flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-top: 50px;
+              padding-right: 50px;
+           
+        }
+
+        a{
+            color:rgb(109, 105, 105);
+            text-decoration: none;
+            margin-right: 25px;
+            
+    }
 
         p{
             font-size:25px;
@@ -23,7 +39,7 @@
 
             display:flex;
             /* gap:30px; */
-            padding-top: 10px;
+            padding-top: 0px;
             padding-left: 10px;
             padding-right: 10px;
 
@@ -48,19 +64,40 @@
         body{
             background-color: black;
             padding-left: 250px;
-            padding-top: 100px;
+            padding-top:0px;
             
           }
           h3{
-            color:rgb(93, 93, 90);
+            color:rgb(242, 242, 218);
             font-size: 30px;
             padding-left: 150px;
           }
+
+          a:hover{
+            background-color:rgb(25, 24, 26);
+            transition: 0.4s;
+          }
+    
+
+
     </style>
 </head>
 <body>
-    <h3>About Me</h3>
+    
+    <nav>
+            
+           <div class="menu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Projects.html">Projects</a>
+           <a href="contact.html">Contact</a>
+           </div>
+        </nav>
+
+        <h3>About Me</h3>
     <div>
+        
      <p>
         Education:<br><br>
       
@@ -80,5 +117,6 @@
         <br>And I'm interested in becoming a web developer.</p>
          </div>
 
+    
 </body>
 </html>

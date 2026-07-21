@@ -8,18 +8,23 @@
         body{
             background-color: black;
             padding-left: 400px;
-            padding-top:100px;
+            padding-top:40px;
             justify-content: center;
             
         }
 
-        h2{
+        h1{
             color:antiquewhite;
-            padding-left: 150px;
+            /* padding-left: 00px;
+            padding-top: 20px; */
+            font-size: 30px;
+
         }
 
-        h3{
+        h2{
             color:rosybrown;
+            padding-top: 30px;
+            font-size: 18px;
 
         }
 
@@ -43,22 +48,55 @@
             /* align-items: center; */
             justify-content: space-between;
         }
+
+         nav {
+          display: flex;
+          justify-content: flex-end;
+          /* gap: 20px; */
+          padding: 20px 50px;
+          /* align-items: center; */
+    }
+
+        a{
+            color:rgb(109, 105, 105);
+            text-decoration: none;
+            margin-right: 25px;
+            
+    }
+
+    a:hover{
+            background-color:rgb(33, 32, 34);
+            transition: 0.4s;
+    }
+
     </style>
 </head>
 <body>
 
-    <h2>Projects</h2>
+    
+         <nav>
+           <div class="menu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Projects.html">Projects</a>
+           <a href="contact.html">Contact</a>
+           </div>
+        </nav>
+        <h1>Projects</h1>
 
-      <h3>Portfolio Website</h3>
+      <h2>Portfolio Website</h2>
                 <p>
                     Personal portfolio created using HTML and CSS showcasing skills,introduction
                     projects, and contact details.
                 </p>
-        <h3>Calculator</h3>
+        <h2>Calculator</h2>
                 <p>
                     Developed a calculator , valid mailid and password using Java and
                     MySQL for managing student records.
                 </p>
+
+           
        
 </body>
 </html>

@@ -7,20 +7,21 @@
     <style>
         
         h2{
-            color:rgb(49, 47, 47);
+            color:rgb(253, 239, 239);
             font-size: 25px;
+            padding-top: 0px;
             
         }
 
         p{
             display :inline-flex;
-            border:2px double rgb(152, 148, 160);
+            border:2px double rgb(126, 117, 144);
             font-size: 20px;
             border-radius: 10px;
 
             padding-left: 10px;
 
-            color:rgb(43, 43, 55);
+            color:rgb(102, 102, 106);
             margin:10px;
             width:600px;
             height:100px;
@@ -34,7 +35,7 @@
 
         body{
              padding-left: 450px;
-            padding-top: 50px;
+            padding-top: 10px;
             background-color: black;
         
         }
@@ -42,7 +43,7 @@
         
     body{
         font-family: Arial, sans-serif;
-        background: linear-gradient(to right, #707272, #676769);
+        background: linear-gradient(to right, #222323, #212121);
         /* display: flex; */
         justify-content: center;
         align-items: center;
@@ -52,7 +53,7 @@
     }
 
     form{
-        background: #424141;
+        background: #282323;
         padding: 45px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -61,7 +62,7 @@
 
     label{
         font-weight: bold;
-        color: #0f0a0a;
+        color: #675a5a;
         display: block;
         margin-bottom: 5px;
     }
@@ -87,6 +88,7 @@
     .buttons{
         display: flex;
         justify-content: space-between;
+        color:#222323;
     }
 
     button{
@@ -94,26 +96,50 @@
         padding: 10px;
         border: none;
         border-radius: 6px;
-        color: rgb(100, 98, 98);
+        color: rgb(28, 25, 25);
         font-size: 16px;
         cursor: pointer;
     }
 
     button[type="submit"]{
-        background-color: #393d3a;
+        background-color: #5d5858;
     }
 
     button[type="submit"]:hover{
-        background-color: #3b403c;
+        background-color: #5d5858;
     }
 
     button[type="reset"]{
-        background-color: #444142;
+        background-color: #5d5858;
     }
 
     button[type="reset"]:hover{
         background-color: #5d5858;
     }
+
+     nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px 70px;
+    padding-top:50px;
+    padding-right: 50px;
+    
+    }
+
+        a{
+            color:rgb(109, 105, 105);
+            text-decoration: none;
+            margin-right: 25px;
+           
+            
+    }
+
+    a:hover{
+            background-color:rgb(32, 32, 33);
+            transition: 0.4s;
+    }
+
 </style>
         
    
@@ -121,7 +147,19 @@
 <body>
     
 
-    <h2>Contact Details</h2>
+    
+    <nav>
+            
+           <div class="menu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Projects.html">Projects</a>
+           <a href="contact.html">Contact</a>
+           </div>
+        </nav>
+
+        <h2>Contact Me</h2>
    
     <p>Phone No: 8106464960<br>
     Email: vasamsindhusri@gmail.com<br>
@@ -143,7 +181,7 @@
         </div>
     </form>
    
-    
-    
+   
+   
 </body>
 </html>
