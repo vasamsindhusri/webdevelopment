@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         nav{     
+
+           display: flex;
+           justify-content: flex-end;
+           align-items:center;
+           gap: 10px;
+           margin:0;
+           padding:0;
+           height:50px;
+           background-color:rgb(170, 151, 102);
+        }
+
+        a{
+            color:rgb(69, 2, 2);
+            text-decoration: none;
+            margin-right: 25px;
+           
+        }
+        
+        a:hover{
+            background-color:rgb(148, 67, 40);
+            transition: 0.4s;
+    
+         }
+
+         h1{
+            font-size: 40px;
+            padding-left:550px;
+            padding-top:1px;
+         }
+
+         p1{
+            padding-left: 520px;
+         }
+         .box{
+            /* display :inline-flex;
+            border:2px double rgb(65, 63, 63);
+            font-size: 20px;
+            border-radius: 10px; */
+
+            display: flex;
+            gap:30px;
+            padding-top: 10px;
+            padding-left: 250px;
+
+            /* margin:10px; */
+            /* width:500px;
+            height:100px; */
+
+            /* color:rgb(175, 156, 193);
+            box-sizing:content-box; 
+            /* align-items: center; */
+            /* justify-content: space-between; */ 
+         }
+
+         p{
+            padding-right:20px;
+         }
+
+         h2{
+            padding-left:1px;
+         }
+
+         .book{
+            padding-right: 50px;
+         }
+        
+         span{
+            color:gold;
+         }
+
+         body{
+            background-color:blanchedalmond;
+         }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">  
+            <a href="Home.html">Home</a>
+            <a href="Books.html">Books</a>
+            <a href="About.html">About</a>
+            <a href="Login.html">Login</a>
+           
+           </div>
+    </nav>
+    
+    <h1>
+        Featured Books
+    </h1>
+      
+    <p1>Hand-picked bestsellers loved by readers across India</p1>
+    <br>
+
+<div class="box">
+
+    <div>
+    <img src="https://m.media-amazon.com/images/I/817HaeblezL._AC_UF1000,1000_QL80_.jpg" width="200" height="400" >
+    <br>
+    <h2>Atomic Habits</h2>
+    <p>James Clear</p>
+    <span class="star" onclick="toggleStar()">&#9733;4.9</span>
+    <p>₹499</p>
+</div>
+
+
+    <br><br>
+<div>
+    <img src="https://m.media-amazon.com/images/I/61P27LfiJSL._SY466_.jpg" width="200" height="400">
+    <br>
+    <h2>Wings of Fire</h2>
+    <p>A.P.J. Abdul Kalam</p>
+    <span class="star" onclick="toggleStar()">&#9733;4.8</span>
+
+    <p>₹299</p>
+
+</div>
+
+
+<br><br>
+<div> 
+    
+    <img src="https://m.media-amazon.com/images/I/81qgEPE6k1L._SY466_.jpg" width="200" height="400">
+    <br>
+    <h2>The 7 Habits of Highly<br> Effective People</h2>
+    <p>Stephen Covey</p>
+    <span class="star" onclick="toggleStar()">&#9733;4.8</span>
+    <p>₹440</p>
+    </div>
+
+
+    <br><br>
+    <div class="book">
+        <img src="https://cdn.penguin.co.in/wp-content/uploads/2025/11/9780143475835-3.jpg" width="200" height="400">
+        <br>
+        <h2>Amma's Diary</h2>
+        <p>Ravi Mantri</p>
+        <span class="star" onclick="toggleStar()">&#9733;5</span>
+        <p>₹500</p>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         nav{     
+
+           display: flex;
+           justify-content:flex-end;
+           align-items:center;
+           gap: 10px;
+           margin:0;
+           padding-top:0px;
+           height:100px;
+           /* width:2500px; */
+           padding-right:50px;
+           background-color:rgb(241, 209, 167);
+        }
+
+        a{
+            /* color:rgb(69, 2, 2); */
+            text-decoration: none;
+            margin-right: 25px;
+           
+        }
+        
+        a:hover{
+            background-color:rgb(148, 67, 40);
+            transition: 0.4s;
+    
+         }
+
+
+         form{
+        background: darkkhaki;
+        padding: 45px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        width: 350px;
+       
+    }
+
+    label{
+        font-weight: bold;
+        color: rgb(249, 243, 156)#675a5a;
+        display: block;
+        margin-bottom: 5px;
+    }
+/* 
+    input,
+    textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid darkkhaki;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+    } */
+
+    
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        color:#222323;
+    }
+
+    button{
+        width: 48%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: rgb(28, 25, 25);
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button[type="Login"]{
+        background-color: rgb(183, 177, 96)
+    }
+
+    button[type="Login"]:hover{
+        background-color:rgb(183, 177, 96)
+    }
+
+    button[type="Signup"]{
+        background-color: rgb(183, 177, 96)
+    }
+
+    button[type="Signup"]:hover{
+        background-color: rgb(183, 177, 96)
+    }
+
+    .form{
+        padding-left: 550px;
+        padding-top: 150px;
+     }
+     body{
+        background-color:antiquewhite
+    } 
+    </style>
+</head>
+<body>
+    <nav>
+         <div class="menu">  
+            <a href="Home.html">Home</a>
+            <a href="Books.html">Books</a>
+            <a href="About.html">About</a>
+            <a href="Login.html">Login</a>
+    </nav>
+
+
+<div class="form">
+    <form> 
+        <label for="email">Email Id</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+        <!-- <label for="message">Message</label><br>
+       <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea> -->
+
+        <div class="buttons">
+            <button type="Login">Login</button>
+            <button type="Signup">Signup</button>
+        </div>
+    </form>
+
+    </div>
+   
+</body>
+</html>
