@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Datatypes:different types of data
+
+        //1.String - "Anything between quotes is String" or 'Text'
+
+        var cusName="Sindhu"
+
+        //Build in method/function-task
+        //typeof(value)
+
+        console.log(typeof(cusName))
+
+        //2. Number- +ve,-ve,decimal number
+
+        var age=12
+        console.log(typeof(age))
+
+        //3.boolean- true or false
+
+        var Loggedin=true
+        var netflix="true"
+        console.log(typeof(Loggedin))
+        console.log(typeof(netflix))
+
+        //4.undefined - when no value is assigned
+
+        var x
+        console.log(typeof(x))
+
+        //5.null - nothing
+        var disc=null
+        console.log(typeof(disc))
+
+        //There is a bug in JS,data type of null shows object as output
+
+        //Data type - 2
+
+        //Multiple datatypes -Array
+
+        //Array :To store multiple data of different data types
+        //Symbol:[] squarebrackets
+        //Rule:index(position of data) starts from 0
+
+        var std=["Sindhu",1,true]
+        console.log(std)
+
+        //length:number of valuesor data in array
+        console.log(std.length)
+
+        //Access the data through index number
+        console.log(std[0])
+
+        //object:collection of data belongs to same thing
+        //symbol:{} curly bracket
+        //rule:  key:value
+
+        var emp={
+            name:"sindhu",
+            email:"sindhu@gmail.com",
+            Loggedin:true
+        }
+        console.log(emp)
+
+        //Access it through keyname - object.keyname
+        console.log(typeof(emp.name))
+        console.log(emp.email)
+
+        //Function is used to do specific task
+        //keyword - function functionname
+
+        function BillCal(){
+            //body of function - instruction/logic
+            var milk=150
+            var bread=100
+
+            var tot=milk+bread
+            console.log("The toatl addition of " ,milk ," and ", bread, " is: ",tot)
+        }
+
+        BillCal() //Calling the function
+    </script>
+</body>
+</html>
