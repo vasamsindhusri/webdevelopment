@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Template String - Text and variable 
+
+        let name = "jack"
+        let country = "USA"
+
+        console.log("My name is" ,name,"and I am from ",country, "Good Evening")
+
+        //New Way - cleanes and readable - backtick`` ${variable/parameter}
+
+        console.log(`Dear ${name},
+        How are you? Did you come from ${country},
+        have a nic day
+        `)
+
+        //Arrow Function
+        function xyz(){
+            console.log("Hello I am old function")
+        }
+        xyz()
+
+        let abc=()=> {
+            console.log("Heelo I am Arrow Function- in one single line")
+        }
+        abc() //Calling the arrow function
+
+        //set the timer to function
+        setTimeout(()=> {
+            console.log("I will give you the output after some time")
+        },5000) //1000-1sec
+
+        // setInterval(()=>{
+        //     console.log("Code will run after every 2 seconds of break")
+        // },5000)
+    </script>
+</body>
+</html>

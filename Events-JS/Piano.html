@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+         }
+
+         .piano{
+            display:flex;
+            justify-content: center;
+            margin-top:50px;
+         }
+
+         .key{
+           border:  1px solid black;
+           width:60px;
+           height:200px;
+           margin:2px;
+           background-color:white;
+           box-shadow:2px 2px 5px;
+           cursor:pointer;
+
+         }
+    </style>
+</head>
+<body>
+    <h1>Piano - Events</h1>
+
+    <div class="piano">
+        <div class="key" data-note="C">C</div>
+        <div class="key" data-note="D">D</div>
+        <div class="key" data-note="E">E</div>
+        <div class="key" data-note="F">F</div>
+        <div class="key" data-note="G">G</div>
+        <div class="key" data-note="A">A</div>
+        <div class="key" data-note="B">B</div>
+    </div>
+
+    <audio id="audio-C" src="./freesound_community-c3-95007 - Copy.mp3"></audio>
+    <audio id="audio-D" src="./freesound_community-d6-82018 - Copy.mp3"></audio>
+    <audio id="audio-E" src="./u_c58whxla22-c-422088 - Copy.mp3"></audio>
+    <audio id="audio-F" src="./u_op8btczor7-piano-f-508249 - Copy.mp3"></audio>
+    <audio id="audio-G" src="./freesound_community-piano-g-6200 - Copy.mp3"></audio>
+    <audio id="audio-A" src="./freesound_community-a6-82015 - Copy.mp3"></audio>
+    <audio id="audio-B" src="./freesound_community-03_b5-82301 - Copy.mp3"></audio>
+
+    <script>
+        const keys=document.querySelectorAll(".key")
+
+        console.log(keys)  //keys is the array which is store all the div containers
+
+        keys.forEach(function(e){
+
+            const note=e.getAttribute("data-note")
+
+            const audio=document.getElementById("audio-" +note)
+
+            //Action-click
+            e.addEventListener('click',function(){
+                audio.currentTime=0;
+                audio.play()//in-built method
+            })
+
+            //Mouse
+            e.addEventListener('Mouseover',function(){
+                e.style.backgroundColor="lightblue"
+            })
+
+
+             e.addEventListener('Mouseout',function(){
+                e.style.backgroundColor="yellow"
+            })
+
+        })//Each data on array and do one task
+    </script>
+</body>
+</html>

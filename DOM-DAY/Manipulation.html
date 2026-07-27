@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Example -1 -- Updating textContent -->
+    <button id="btn">Login</button>
+
+    <p id="mp">Welcome guest</p>
+
+    <!-- Example 2 -Updating Tag Itself-->
+
+    <div id="mydiv" style="background-color: bisque;">This is div</div>
+
+    <!-- Example - 3 change the css prop -->
+     <p id="mtp">This is old dull paragraph</p>
+
+     <!-- Create Element/Tag through JS -->
+
+     <ul id="lis">
+
+        <li>Gym</li>
+
+     </ul>
+    <script>
+        //Update text content
+        const button=document.getElementById("btn")
+        console.log(button)
+        console.log(button.textContent)
+
+        button.textContent="Logout"
+
+        const para=document.getElementById('mp')
+        para.textContent="Good Evening "
+
+        //Update Tag-innerHTML-Which helps us to update Tag also content as well
+
+        const container =document.getElementById("mydiv")
+        console.log(container)
+
+        //single html tag updates under quotes
+        // container.innerHTML="<h2>This is Heading Tag Now</h2>"
+
+        //multiple html tags under backtick ``
+
+        container.innerHTML=`
+        <p>This is <mark>Updated</mark> Tag</p>
+        <img src="https://images.pexels.com/photos/38524143/pexels-photo-38524143.jpeg" height="100" width="150">
+        <button>Smile</button>
+        `
+
+        const paragraph=document.getElementById("mtp")
+        //.style.propertyName
+
+       paragraph.style.color="blue"
+        paragraph.style.backgroundColor="black"
+        paragraph.style.textAlign="center"
+        paragraph.textContent="This is New paragraph tag"
+
+        const list=document.getElementById("lis")
+
+                //    document.createElement("TagName")
+        const li=document.createElement("li")
+        li.textContent="office"
+        li.style.color="yellow"
+
+        //ParentName.appendChild(ChildTagName)
+
+        list.appendChild(li)
+
+    </script>
+
+
+</body>
+</html>
