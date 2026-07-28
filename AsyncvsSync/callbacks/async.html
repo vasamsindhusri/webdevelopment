@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Asynchronous:performs multiple task at the same time -->
+     <script>
+        // task 1 :coffee -- 10sec
+
+        function StartTask(){
+            console.log("Step 1:Boil Water - 5sec")
+
+            setTimeout(()=>{
+                console.log("Step 2:Water is ready")
+            },5000)
+
+            console.log("Step 3:Doing other task as well")
+        }
+        StartTask()
+
+
+
+        //task 2:greeting --2sec
+
+        function greeting(){
+            console.log("Good evening welcome back user")
+        }
+        greeting()
+     </script>
+</body>
+</html>
