@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="dash.css">
+
+     <script src="script.js" defer></script>
+</head>
+<body>
+   
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Employee</h2>
+
+        <ul>
+            <li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
+            <li><i class="fa-solid fa-users"></i> Employees</li>
+            <li><i class="fa-solid fa-user-plus"></i> Add Employee</li>
+            <li><i class="fa-solid fa-calendar"></i> Attendance</li>
+            <li><i class="fa-solid fa-money-bill"></i> Payroll</li>
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Header -->
+        <header>
+            <h1>Employee Dashboard</h1>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/50" alt="">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+
+            <div class="card blue">
+                <h3>Total Employees</h3>
+                <h1>125</h1>
+            </div>
+
+            <div class="card green">
+                <h3>Present</h3>
+                <h1>115</h1>
+            </div>
+
+            <div class="card orange">
+                <h3>Absent</h3>
+                <h1>10</h1>
+            </div>
+
+            <div class="card red">
+                <h3>Departments</h3>
+                <h1>8</h1>
+            </div>
+
+        </section>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search Employee...">
+        </div>
+
+        <!-- Table -->
+        <section class="table-section">
+
+            <table id="employeeTable">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>EMP101</td>
+                        <td>John Smith</td>
+                        <td>HR</td>
+                        <td>john@gmail.com</td>
+                        <td><span class="status active">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP102</td>
+                        <td>Emma Watson</td>
+                        <td>IT</td>
+                        <td>emma@gmail.com</td>
+                        <td><span class="status active">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP103</td>
+                        <td>David Lee</td>
+                        <td>Finance</td>
+                        <td>david@gmail.com</td>
+                        <td><span class="status inactive">Inactive</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP104</td>
+                        <td>Sophia</td>
+                        <td>Marketing</td>
+                        <td>sophia@gmail.com</td>
+                        <td><span class="status active">Active</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>EMP105</td>
+                        <td>Michael</td>
+                        <td>Sales</td>
+                        <td>michael@gmail.com</td>
+                        <td><span class="status inactive">Inactive</span></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
