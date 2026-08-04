@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <link rel="stylesheet" href="page.css">
+    <div class="stars"></div>
+   
+<header>
+ 
+  <h1>Sky <span class="amp">&amp;</span> Screen</h1>
+  <p class="sub">Search a city for its current sky, or a film for details</p>
+</header>
+
+
+
+<main>
+  <!-- WEATHER PANEL -->
+  <section class="panel weather">
+    <div class="panel-head">
+      <span class="tag">Weather</span>
+    </div>
+    <h2 style="margin-bottom:18px;">What's the sky doing?</h2>
+
+    <div class="search-row">
+      <input id="wxInput" type="text" placeholder="Try Lisbon, Jaipur, Reykjavík…" autocomplete="off">
+      <button class="go" id="wxBtn">Search</button>
+    </div>
+
+
+    <div class="result" id="wxResult">
+      <div class="placeholder">Enter a city to see its current conditions.</div>
+    </div>
+  </section>
+
+  <!-- MOVIE PANEL -->
+
+
+  <section class="panel movie">
+    <div class="panel-head">
+      <span class="tag">Cinema</span>
+    </div>
+    <h2 style="margin-bottom:18px;">Enter Your Movie</h2>
+
+    <div class="search-row">
+      <input id="mvInput" type="text" placeholder="Try Amélie, Interstellar, Parasite…" autocomplete="off">
+      <button class="go" id="mvBtn">Search</button>
+    </div>
+    
+
+    <div class="result" id="mvResult">
+      <div class="placeholder">Enter your movie to see its poster and details.</div>
+    </div>
+  </section>
+</main>
+
+<footer>sky &amp; screen — a small diptych for weather and film</footer>
+
+ 
+
+<script>
+
+
+const wxInput = document.getElementById("wxInput");
+const wxBtn = document.getElementById("wxBtn");
+const wxResult = document.getElementById("wxResult");
+
+const weatherCodes = {
+    0: "☀️ Clear Sky",
+    1: "🌤 Mainly Clear",
+    2: "⛅ Partly Cloudy",
+    3: "☁️ Overcast",
+    45: "🌫 Fog",
+    48: "🌫 Fog",
+    51: "🌦 Light Drizzle",
+    53: "🌦 Moderate Drizzle",
+    55: "🌧 Heavy Drizzle",
+    61: "🌦 Slight Rain",
+    63: "🌧 Moderate Rain",
+    65: "🌧 Heavy Rain",
+    71: "🌨 Snow",
+    73: "🌨 Moderate Snow",
+    75: "❄ Heavy Snow",
+    80: "🌦 Rain Showers",
+    81: "🌧 Heavy Rain Showers",
+    95: "⛈ Thunderstorm"
+};
+
+async function getWeather() {
+
+    const city = wxInput.value.trim();
+
+    if (city === "") {
+        alert("Please enter a city name.");
+        return;
+    }
+
+    wxResult.innerHTML = "<h3>Loading...</h3>";
+
+    try {
+
+        // Find city coordinates
+        const geoResponse = await fetch(
+            `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`
+        );
+
+        const geoData = await geoResponse.json();
+
+        if (!geoData.results || geoData.results.length === 0) {
+            wxResult.innerHTML = "<h3>City not found.</h3>";
+            return;
+        }
+
+        const place = geoData.results[0];
+
+        // Get weather
+        const weatherResponse = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${place.latitude}&longitude=${place.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&timezone=auto`
+        );
+
+        const weatherData = await weatherResponse.json();
+
+        const current = weatherData.current;
+
+        wxResult.innerHTML = `
+            <div style="border:1px solid #ccc;padding:20px;border-radius:10px;width:300px;margin-top:20px;">
+                <h2>${place.name}, ${place.country}</h2>
+                <h1>${current.temperature_2m}°C</h1>
+                <h3>${weatherCodes[current.weather_code] || "Unknown Weather"}</h3>
+                <p><strong>Feels Like:</strong> ${current.apparent_temperature}°C</p>
+                <p><strong>Humidity:</strong> ${current.relative_humidity_2m}%</p>
+                <p><strong>Wind Speed:</strong> ${current.wind_speed_10m} km/h</p>
+            </div>
+        `;
+
+    } catch (error) {
+        console.error(error);
+        wxResult.innerHTML = "<h3>Unable to fetch weather data.</h3>";
+    }
+}
+
+wxBtn.addEventListener("click", getWeather);
+
+wxInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        getWeather();
+    }
+});
+
+
+
+
+
+
+
+  
+  // ---------- MOVIES ----------
+
+const mvInput = document.getElementById("mvInput");
+const mvBtn = document.getElementById("mvBtn");
+const mvResult = document.getElementById("mvResult");
+
+async function lookupMovie() {
+    const query = mvInput.value.trim();
+
+    if (!query) {
+        mvResult.innerHTML = "<p>Please enter a movie or TV show name.</p>";
+        return;
+    }
+
+    mvResult.innerHTML = "<p>Searching...</p>";
+
+    try {
+        const response = await fetch(
+            `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(query)}`
+        );
+
+        const data = await response.json();
+
+        if (data.length === 0) {
+            mvResult.innerHTML = "<p>No results found.</p>";
+            return;
+        }
+
+        const movie = data[0].show;
+
+        mvResult.innerHTML = `
+            <div class="movie-card">
+                <img src="${
+                    movie.image
+                        ? movie.image.medium
+                        : "https://via.placeholder.com/200x300?text=No+Image"
+                }" alt="${movie.name}">
+
+                <h2>${movie.name}</h2>
+
+                <p><b>Language:</b> ${movie.language || "N/A"}</p>
+
+                <p><b>Genres:</b> ${movie.genres.join(", ") || "N/A"}</p>
+
+                <p><b>Rating:</b> ${
+                    movie.rating.average || "Not Rated"
+                }</p>
+
+                <p><b>Status:</b> ${movie.status}</p>
+
+                <p><b>Premiered:</b> ${movie.premiered || "N/A"}</p>
+
+                <p>${movie.summary || ""}</p>
+            </div>
+        `;
+    } catch (error) {
+        mvResult.innerHTML = "<p>Error loading data.</p>";
+    }
+}
+
+mvBtn.addEventListener("click", lookupMovie);
+
+mvInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        lookupMovie();
+    }
+});
+
+</script>
+ 
+
+</body>
+</html>
